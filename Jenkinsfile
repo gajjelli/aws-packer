@@ -17,7 +17,7 @@ node {
     sh "/usr/local/packer -v ;/usr/local/packer validate ${packer_file}"
 
     stage 'Build'
-      sh "/usr/local/packer -var-file=cred.json build ${packer_file}"
+      sh "/usr/local/packer -var-file=cred.json ${packer_file}"
 
     stage 'Test'
       print "Testing goes here."
