@@ -1,0 +1,30 @@
+Memory Cached:
+
+-------------------------
+Elastic Cache - Providers
+-------------------------
+	1. MemChached - AWS
+	2. Redis	- Support most of all libs(Java, php, .net ..etc)
+	3. Hazelcast - More for Java/PHP based 
+
+---------------
+Theory Material
+---------------
+
+http://cloudacademy.com/blog/amazon-elasticache/
+http://www.engineersbloc.com/collection/277/
+https://blog.hazelcast.com/hazelcast-vs-elasticache-memcached/
+http://www.bigdatalittlegeek.com/blog/2014/3/25/memcached-vs-redis
+
+ElastiCache clusters can only be accessed directly from within the VPC in which it resides. This is because ElastiCache is not a secured service.
+In order to connect to your ElastiCache remotely, you need to go through a bastion server or a NAT. AWS has created instructions here:
+http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Access.Outside.html
+To use a bastion, you would SSH into your bastion EC2 instance that resides in your VPC. Once connected, you can tunnel your ElastiCache connection from your PC, or you can connect to your cache from your bastion's command prompt.
+
+
+
+AWS :  Example1 (MemCached)
+http://blog.e-zest.com/how-to-implement-aws-elasticache/
+
+AWS :  Phython example  (With Redis)
+https://whiletrue.run/2016/10/13/amazon-elasticache-redis/
