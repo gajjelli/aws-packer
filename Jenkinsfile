@@ -6,13 +6,13 @@ node {
   currentBuild.result = "SUCCESS"
 
   try {
-    stage 'Checkout'
+    stage 'Checkout.'
       checkout scm
 
-    stage 'Validate'
+    stage 'Validate.'
       def packer_file = 'ami-build-packer.json'
       print "Running packer validate on : ${packer_file}"
-      
+
     /* ../packer build --var-file cred.json first_example.json */
     sh "/usr/local/packer -v ;/usr/local/packer validate ${packer_file}"
 
